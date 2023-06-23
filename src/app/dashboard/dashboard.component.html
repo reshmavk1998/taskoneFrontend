@@ -1,0 +1,249 @@
+<!-- navbar -->
+<app-header></app-header>
+
+
+<!-- section -->
+<div class=" container shadow p-3 mt-4 bg-light rounded  " >
+    <p style="color: grey;">Your subscription ends on 25 March 2023 </p>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-6 mt-3">
+            <highcharts-chart class="mt-3"
+              [Highcharts]="Highcharts" [options]="chartOptions" style="width: 100%; height: 300px; display: block;"></highcharts-chart>
+
+            <div class="row mt-5"> 
+
+                <div class="row">
+    
+                    <div class="row">
+                        <div class="col-md-2 mt-3">
+                          <h3><b>Learning Paths</b></h3>
+                        </div>
+                        <div class="col-md-8"></div>
+                        <div class="col-md-2 text-end">
+                          <a class="text-end">All my Learning Paths</a>
+                        </div>
+                      </div>
+                      <div class=" mb-4 mb-lg-0 p-3" *ngFor="let course of courses">
+                        <div class="card shadow-sm" style="height: 90px;">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-md-2">
+                                <img width="60" src="{{course.image1}}" class="rounded d-block " alt="Your Image">
+                              </div>
+                              <div class="col-md-8">
+                                <h3><b>{{course.h1}}</b>
+                                    <br><p>24 courses</p>
+                                </h3>
+                               
+                              </div>
+                              <div class="col-md-2">
+                                <button class="btn btn-light">Resume</button>
+                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ok -->
+
+                      
+                      <!-- ok -->
+                  </div>
+            </div>
+        </div>
+
+
+        <div class="col-6">
+            <highcharts-chart 
+            [Highcharts]="Highcharts"
+            [options]="chart1"
+          
+            style="width: 100%; height: 300px; display: block;"
+  
+          
+          ></highcharts-chart>
+          <div class="row md-5">
+            <h3><b>Achievements</b></h3>
+            <div class=" bg-image">
+                <div class="content">
+                  <div class="row">
+                      <div class="col-md-4">
+                        <h2>Achievement <br> June 5 2022</h2>
+                        
+                          <div class="logo">
+                            <img width="130" src="https://cdn3.iconfinder.com/data/icons/hands-2-1/128/46-512.png" alt="Trophy Logo">
+                          </div>
+                      </div>
+                      <div class="col-md-8 text-start">
+                          <h2>Flinto</h2>
+                          <p style="color: white;">Introduction to App Design Application </p>
+                      </div>
+                  </div>
+                  
+                </div>
+              </div>
+          </div>
+
+            <div class="row mt-5">
+
+                <div class="row">
+                    <div class="col-md-2">
+                      <h3><b>Courses</b></h3>
+                    </div>
+                    <div class="col-md-8"></div>
+                    <div class="col-md-2 text-end">
+                      <a class="text-end">All my Courses</a>
+                    </div>
+                  </div>
+                  <div class="row mx-auto my-auto justify-content-center">
+                    <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active" *ngFor="let course of courses">
+                                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 p-3" >
+                                    <div  class="card " style="width: 20rem;height: 20rem;">
+                                      <img class="card-img-top" height="100%" src="{{course.image}}" alt="Card image cap">
+                                      <div class="card-body">
+                                        <h3 class="card-text"><b>{{course.title}}</b>&nbsp; <i class="fa-regular fa-heart"></i></h3>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <a class="carousel-control-prev bg-transparent w-aut text-light" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next bg-transparent w-aut"  href="#recipeCarousel" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                  </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div>
+  <app-discussion></app-discussion>
+</div> -->
+
+<div class="container mt-5">
+  <h3><b>Discussions</b></h3>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+              <div class="col-md-3">
+                </div>
+              
+              <div class="col-md-4">
+                     
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="exampleModalLabel">Ask Question Here..</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <input type="text" class="d-flex">
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+      <button type="button" class="btn btn-primary">Post</button>
+    </div>
+  </div>
+</div>
+</div>
+
+              </div>
+
+          </div>
+          
+        </div>
+        <div class="card-body">
+          <div class="media">
+          <div class="row">
+              <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-2">
+                    <img class="mr-3" width="40" height="40" src="https://www.shareicon.net/data/2016/09/01/822725_user_512x512.png" alt="User Image">
+                </div> 
+                  <div class="col-md-10"><h5 class="mt-0"> <small class="text-muted">3 days ago</small> <br> User Name </h5></div>
+            </div>
+          </div>
+
+                  <div class="col-md-8"><p>Using Angular HttpClientModule instead of HttpModule</p></div>
+                  <div class="col-md-1 text-center">1 <br> answers</div>
+            </div>
+          </div>
+          <!-- More discussions -->
+          <hr>
+          <div class="media">
+              <div class="row">
+                  <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img class="mr-3" width="40" height="40" src="https://www.shareicon.net/data/2016/09/01/822725_user_512x512.png" alt="User Image">
+                    </div> 
+                      <div class="col-md-10"><h5 class="mt-0"> <small class="text-muted">3 days ago</small> <br> User Name </h5></div>
+                </div>
+              </div>
+    
+                      <div class="col-md-8"><p>Using Angular HttpClientModule instead of HttpModule</p></div>
+                      <div class="col-md-1 text-center">1 <br> answers</div>
+                </div>
+              </div>
+              <hr>
+
+              <div class="media">
+                  <div class="row">
+                      <div class="col-md-3">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img class="mr-3" width="40" height="40" src="https://www.shareicon.net/data/2016/09/01/822725_user_512x512.png" alt="User Image">
+                        </div> 
+                          <div class="col-md-10"><h5 class="mt-0"> <small class="text-muted">3 days ago</small> <br> User Name </h5></div>
+                    </div>
+                  </div>
+        
+                          <div class="col-md-8"><p>Using Angular HttpClientModule instead of HttpModule</p></div>
+                          <div class="col-md-1 text-center">1 <br> answers</div>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <div class="media">
+                      <div class="row">
+                          <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img class="mr-3" width="40" height="40" src="https://www.shareicon.net/data/2016/09/01/822725_user_512x512.png" alt="User Image">
+                            </div> 
+                              <div class="col-md-10"><h5 class="mt-0"> <small class="text-muted">3 days ago</small> <br> User Name </h5></div>
+                        </div>
+                      </div>
+            
+                              <div class="col-md-8"><p>Using Angular HttpClientModule instead of HttpModule</p></div>
+                              <div class="col-md-1 text-center">1 <br> answers</div>
+                        </div>
+                      </div>
+                      &nbsp;
+          <button class="btn btn-link float-right " style="align-items: center;">View more discussions</button>
+        
+        
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar or other content -->
+
+  </div>
+</div>
+
+<app-footer></app-footer>

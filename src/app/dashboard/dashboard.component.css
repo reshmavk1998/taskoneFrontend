@@ -1,0 +1,29 @@
+.bg-image {
+    background-image: url('https://th.bing.com/th/id/R.97f5aa82dc5a37be6d445b1122b590d2?rik=KYfIin4RanEiWw&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fBest-light-blue-wallpaper.jpg&ehk=c1oH5D73DpUlTlizyzzTZb4D8ZiuwTB%2fmi%2fX%2fJlQRGQ%3d&risl=&pid=ImgRaw&r=0');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 900px;
+    margin-top: 10px;
+  }
+  
+  .content {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .logo {
+    margin-bottom: 20px;
+  }
+  
+  .top-right-logo {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+  }
+  
+  @media (max-width: 767px) {
+    .bg-image {
+      height: 300px;
+    }
+  }

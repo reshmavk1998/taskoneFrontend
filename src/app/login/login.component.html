@@ -1,0 +1,43 @@
+<!-- login page -->
+
+<section>
+    <div class="form-box">
+        <div class="form-value">
+            <form (ngSubmit)="login()" [formGroup]="loginForm" action="">
+                 <h2>Sign In</h2>
+                 <div class="inputbox">
+                    <input name="email" formControlName="email" type="email" required>
+                    <label for="floatingInput">Email</label>
+                 </div>
+                 <!-- invalid email -->
+                 <div *ngIf=" this.loginForm.get('email')?.errors&& this.loginForm.get('email')?.touched" class="text-danger mt--3">Invalid Email</div>
+                 <div class="inputbox">
+                     <input name="pswd" formControlName="pswd" type="password" required>
+                    <label for="floatingpassword">Password</label>
+                 </div>
+                 <!-- invalid password -->
+                 <div *ngIf=" this.loginForm.get('pswd')?.errors&& this.loginForm.get('pswd')?.touched" class="text-danger" style="margin-bottom: 10px; font-size: smaller;">Invalid password</div>
+                 
+                 <!-- errormsg -->
+                 <div class="text-danger" style="margin-bottom: 10px;">
+                    {{errorMsg}}
+                 </div>
+                 
+                 <div class="forget">
+                 <a href="#">Forgot password</a>
+
+                 <!-- login button -->
+                 </div>
+                 <button type="submit" class="btn btn-primary" >Login  &nbsp;
+                    <span *ngIf="successMsg"   class="spinner-border text-light fs-6 "  role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </span>
+                 </button>
+                 <!-- register  -->
+                 <div class="register">
+                    <p >New User ? Click Here to <a style="margin-left: 10px;" routerLink="/signup">Signup</a></p>
+                 </div>
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,38 @@
+<!-- signup page -->
+
+<section>
+    <div class="form-box">
+        <div class="form-value">
+            <form  (ngSubmit)="signup()" [formGroup]="signupForm" action="">
+                 <h2>Sign Up</h2>
+                 <!-- username -->
+                 <div class="inputbox">
+                    <input name="uname" formControlName="uname" type="Username" required>
+                    <label for="floatingInput">username</label>
+                 </div>
+                 <!-- invalid uname -->
+                 <div *ngIf=" this.signupForm.get('uname')?.errors&& this.signupForm.get('uname')?.touched" class="text-danger "style="font-size: smaller;">Invalid Username</div>
+                 <!-- email -->
+                 <div class="inputbox">
+                    <input name="email" formControlName="email" type="email" required>
+                    <label for="floatingInput">Email</label>
+                 </div>
+                 <!-- invalid email -->
+                 <div *ngIf=" this.signupForm.get('email')?.errors&& this.signupForm.get('email')?.touched" class="text-danger " style="font-size: smaller;" >Invalid Email</div>
+                 <!-- password -->
+                 <div class="inputbox">
+                     <input  name="pswd" formControlName="pswd" type="password" required>
+                    <label for="floatingpassword">Password</label>
+                 </div>
+                 <!-- invalid email -->
+                 <div *ngIf=" this.signupForm.get('pswd')?.errors&& this.signupForm.get('pswd')?.touched" class="text-danger " style="font-size: smaller;">Invalid Password</div>
+                 <!-- signup button -->
+                 <button type="submit" class="btn btn-primary">SignUp</button>
+                 <!-- signin  -->
+                 <div class="login">
+                    <p >Already a User? Click here to <a style="margin-left: 10px;" routerLink="/">SignIn</a></p>
+                 </div>
+            </form>
+        </div>
+    </div>
+</section>

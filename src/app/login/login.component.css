@@ -1,0 +1,114 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url('http://www.pixelstalk.net/wp-content/uploads/2016/03/Pattern-color-light-blue-dark-wallpaper.jpg')no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.form-box{
+    position: relative;
+    width: 550px;
+    height: 450px;
+    background-color:transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    font-size: 2em;
+    color:white;
+    text-align: center;
+}
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid white;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color:white;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+
+.inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: white;
+}
+ 
+.forget{
+    
+    margin: -5px 0 15px;
+    font-size: .9em;
+     color: white;
+     display: flex;
+     justify-content: center;
+}
+.forget label a{
+    margin-right: 3px;
+}
+.forget label a{
+    color: #fff;
+    text-decoration: none;
+}
+.forget label a:hover{
+    text-decoration: underline;
+}
+button{
+    width: 100%;
+    height: 50px;
+    border-radius: 40px;
+    border: none;
+     outline: none;
+     cursor: pointer;
+     font-size: 1.5em;
+     font-weight: 600;
+     
+}
+.register{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p a{
+    text-decoration: none;
+     color: #fff;
+     font-weight: 600;
+}
+ .register p a:hover{
+    text-decoration: underline;
+    color: deeppink;
+ }
+
+

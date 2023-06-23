@@ -1,0 +1,85 @@
+
+<!-- nav -->
+<app-header></app-header>
+
+<div class="container mt-5">
+    <h3><b>Discussions</b></h3>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search discussions">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"></button>
+                      </span>
+                    </div>
+                </div>
+                <div class="col-md-5"></div>
+                <div class="col-md-4">
+                        <button type="button" class="btn btn-default">All Topics <i class="fa-solid fa-caret-down"></i></button>
+                        <button type="button" class="btn btn-default">Newest <i class="fa-solid fa-caret-down"></i></button>
+                      <!-- <button class="btn btn-danger float-right" type="button">Ask a Question</button> -->
+                      <!-- Button trigger modal -->
+<button type="button" class="btn btn-danger float-right" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Ask a Question
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form  (ngSubmit)="discussion()" [formGroup]="discussForm"  class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Ask Question Here..</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input name="que  " formControlName="que"  type="text" class="d-flex form-control ">
+      </div>
+      <!-- invalid password -->
+      <div *ngIf=" this.discussForm.get('uname')?.errors&& this.discussForm.get('uname')?.touched" class="text-danger" style="margin-bottom: 10px; font-size: smaller;">Invalid password</div>
+                 
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button  type="submit" type="button" class="btn btn-primary">Post</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+   </div>
+       </div>
+         </div>
+          <div class="card-body">
+            <div class="media">
+            <div class="row">
+                <div class="col-md-3">
+              <div class="row">
+                  <div class="col-md-2">
+                      <img class="mr-3" width="40" height="40" src="https://www.shareicon.net/data/2016/09/01/822725_user_512x512.png" alt="User Image">
+                  </div> 
+                    <div class="col-md-10"><h5 class="mt-0"> <small class="text-muted">3 days ago</small> <br>username </h5></div>
+              </div>
+            </div>
+  
+                    <div class="col-md-8"><p>Using Angular HttpClientModule instead of HttpModule</p></div>
+                    <div class="col-md-1 text-center">1 <br> answers <button ><i class="fa fa-pen " style="color: darkgoldenrod;"></i></button></div>
+                    
+              </div>
+            </div>
+            <!-- More discussions -->
+            
+                 &nbsp;
+            <button class="btn btn-link float-right " style="align-items: center;">View more discussions</button>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+        </div>
+  </div>
+
+
+  <app-footer></app-footer>
